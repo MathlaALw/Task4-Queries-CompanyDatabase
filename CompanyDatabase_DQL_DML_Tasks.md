@@ -6,3 +6,4 @@
 SELECT * FROM Employee;
 ```
 ![Display all Employee](./image/DisplayAllEmployees.jpg)
+
