@@ -1,6 +1,6 @@
 USE LibraryDatabase;
 
--- Task4 Queries Library Database
+-- Task7 Queries Library Database
 -- Library Database DQL & DML Tasks
 
 -- 1. Display all book records. 
@@ -23,13 +23,16 @@ SELECT CONCAT(FName ,' ',LName) AS FULLName FROM Members WHERE Member_Start_Date
 -- 9. List titles and authors of books available in branch ID = 2. 
  SELECT L_ID,Book_ID from LibraryBook ;
 -- 10. Insert yourself as a member with ID = 405 and register to borrow book ID = 1011. 
-insert into Members (M_ID,FName ,LName ,Email ,Member_Start_Date)
+insert into Members (FName ,LName ,Email ,Member_Start_Date)
 values 
-(405,'Mathla','Alwahaibi' ,'mathlaalwahaibi@gmail.com','2020');
+('Mathla','Alwahaibi' ,'mathlaalwahaibi12@gmail.com','2020');
 
 SET IDENTITY_INSERT Members ON -- to stop the ideintity in PK
 
 SET IDENTITY_INSERT Members OFF -- to return the auto increment again
+
+select * from Book;
+
 -- 11. Insert a member with NULL email and phone. 
 insert into Members (FName ,LName ,Email ,Member_Start_Date)
 values 
@@ -40,3 +43,6 @@ values
 (8,'NULL');
 select * from MembersPhoneNumber;
 -- 12. Update the return date of your loan to today.
+ select * from Members
+ select * from Loan;
+ update Loan set Return_Date = '2024-05-05' where M_ID = 6;
